@@ -11,29 +11,38 @@ console.log(prime?"Prime":"Not Prime");
 let start=10,end=30;
 for(let n1=start;n1<=end;n1++){
  let p=n1>1;
- for(let j=2;j<n1&&p;j++) if(n1%j==0) p=false;
+ for(let j=2;j<n1&&p;j++)
+     if(n1%j==0) p=false;
  if(p) console.log(n1);
 }
 
 // Find GCD and LCM of Two Numbers
 let a=24,b=36,x=a,y=b;
-while(y!=0){let t=y;y=x%y;x=t;}
+while(y!=0)
+    {
+    let t=y;y=x%y;x=t;
+}
 console.log("GCD",x);
 console.log("LCM",(a*b)/x);
 
 // Check Armstrong Number
 let arm=153,t1=arm,s1=0;
-while(t1>0){let d=t1%10;s1+=d*d*d;t1=Math.floor(t1/10);}
+while(t1>0)
+    {
+    let d=t1%10;s1+=d*d*d;t1=Math.floor(t1/10);
+}
 console.log(s1==arm?"Armstrong":"Not Armstrong");
 
 // Check Perfect Number
 let per=28,s2=0;
-for(let i=1;i<per;i++) if(per%i==0) s2+=i;
+for(let i=1;i<per;i++)
+     if(per%i==0) s2+=i;
 console.log(s2==per?"Perfect":"Not Perfect");
 
 // Check Strong Number
 let st=145,t2=st,s3=0;
-while(t2>0){
+while(t2>0)
+    {
  let d=t2%10,f=1;
  for(let i=1;i<=d;i++) f*=i;
  s3+=f;
@@ -43,7 +52,10 @@ console.log(s3==st?"Strong":"Not Strong");
 
 // Find the Sum of Digits of a Number
 let n2=4567,sum=0;
-while(n2>0){sum+=n2%10;n2=Math.floor(n2/10);}
+while(n2>0)
+    {
+        sum+=n2%10;n2=Math.floor(n2/10);
+    }
 console.log(sum);
 
 // Convert Decimal to Binary
@@ -156,6 +168,7 @@ class Box<T>{
  constructor(public value:T){}
  display(){console.log(this.value);}
 }
-new Box<number>(111).display();
-new Box<string>("Hy").display();
+new Box<number>(108).display();
+new Box<string>("hansika").display();
 new Box<boolean>(true).display();
+
